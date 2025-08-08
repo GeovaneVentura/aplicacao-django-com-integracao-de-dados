@@ -1,24 +1,5 @@
 # Desafio Técnico: Integração e Visualização de Dados com Django
 
-Aplicação web desenvolvida como parte de um desafio técnico para uma vaga de desenvolvedor web. O projeto consiste em consumir dados de fontes externas (API do IBGE e CSV da Receita Federal), persisti-los em um banco de dados PostgreSQL e exibi-los em páginas web com funcionalidades de filtro e paginação.
-
-## Tecnologias Utilizadas
-
-* **Backend:** Python 3, Django
-* **Banco de Dados:** PostgreSQL
-* **Frontend:** HTML5, CSS3, Bootstrap
-* **Bibliotecas Python Principais:**
-    * `psycopg2-binary`: Driver de conexão com o PostgreSQL.
-    * `requests`: Para consumo da API do IBGE.
-    * `django-filter`: Para a funcionalidade de filtros nas listagens.
-    * `python-decouple`: Para gerenciamento de variáveis de ambiente.
-
-## Pré-requisitos
-
-* Python 3.8+
-* Git
-* PostgreSQL instalado e rodando.
-
 ## Guia de Instalação e Execução
 
 Siga os passos abaixo para configurar e rodar o projeto localmente.
@@ -26,8 +7,8 @@ Siga os passos abaixo para configurar e rodar o projeto localmente.
 **1. Clone o Repositório:**
 
 ```bash
-git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
-cd NOME_DO_REPOSITORIO
+git clone [https://github.com/GeovaneVentura/aplicacao-django-com-integracao-de-dados](https://github.com/GeovaneVentura/aplicacao-django-com-integracao-de-dados)
+cd aplicacao-django-com-integracao-de-dados
 ```
 
 **2. Crie e Ative o Ambiente Virtual:**
@@ -73,7 +54,7 @@ Crie um banco de dados no PostgreSQL para o projeto. Em seguida, configure as cr
     ```bash
     python manage.py import_ibge_data
     ```
-* Para importar os dados das empresas, primeiro baixe o arquivo `EmpresasX.zip` do [site da Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj) e descompacte-o. Em seguida, execute o comando abaixo, substituindo pelo caminho do arquivo CSV:
+* Para importar os dados das empresas, primeiro baixe o arquivo `Empresas0.zip` do [site da Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj) e descompacte-o. Em seguida, execute o comando abaixo, substituindo pelo caminho do arquivo CSV:
     ```bash
     python manage.py import_empresas /caminho/para/o/seu/arquivo.EMPRECSV
     ```
@@ -94,5 +75,3 @@ Crie um banco de dados no PostgreSQL para o projeto. Em seguida, configure as cr
 * **Listagem de Municípios:** `http://127.0.0.1:8000/municipios/`
 * **Listagem de Distritos:** `http://127.0.0.1:8000/distritos/`
 * **Listagem de Empresas:** `http://127.0.0.1:8000/empresas/`
-
-Todas as páginas de listagem possuem filtros por campos relevantes e controles de paginação.
