@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+<div class="banner">
+<div class="container">
+    <h1 class="font-weight-semibold">Desafio Técnico<br>Integração de Dados</h1>
+    <h6 class="font-weight-normal text-muted pb-3">Aplicação Django para visualização de dados do IBGE e da Receita Federal.</h6>
+    <div class="row justify-content-center mb-3">
+        <div class="col-md-auto">
+            <a href="{% url 'localidades:estado_list' %}" class="btn btn-opacity-success btn-lg text-dark">Ver Estados</a>
+        </div>
+        <div class="col-md-auto">
+            <a href="{% url 'localidades:municipio_list' %}" class="btn btn-opacity-success btn-lg text-dark">Ver Municípios</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto">
+            <a href="{% url 'localidades:distrito_list' %}" class="btn btn-opacity-success btn-lg text-dark">Ver Distritos</a>
+        </div>
+        <div class="col-md-auto">
+            <a href="{% url 'localidades:empresa_list' %}" class="btn btn-opacity-success btn-lg text-dark">Ver Empresas</a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <section class="features-overview" id="features-section" >
+        <div class="content-header">
+          <h2>Como funciona</h2>
+          <h6 class="section-subtitle text-muted">A aplicação consome, processa e exibe dados de diversas fontes.</h6>
+        </div>
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+              <img src="{% static 'images/Group12.svg' %}" alt="" class="img-icons">
+              <h5 class="py-3">API<br>IBGE</h5>
+              <p class="text-muted">Consumo de dados de Estados, Municípios e Distritos via API pública.</p>
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-center">
+            <div class="features-width">
+              <img src="{% static 'images/Group7.svg' %}" alt="" class="img-icons">
+              <h5 class="py-3">CSV<br>Receita Federal</h5>
+              <p class="text-muted">Processamento de um grande volume de dados de empresas via arquivo CSV.</p>
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-end">
+            <div class="features-width">
+              <img src="{% static 'images/Group5.svg' %}" alt="" class="img-icons">
+              <h5 class="py-3">Visualização<br>e Filtros</h5>
+              <p class="text-muted">Navegação, paginação e filtragem dos dados através de uma interface web.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    </div>
+{% endblock %}

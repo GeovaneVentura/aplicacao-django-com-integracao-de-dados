@@ -1,0 +1,27 @@
+# Arquivos do Python
+__pycache__/
+*.pyc
+
+# Pasta do Ambiente Virtual
+dt_env/
+venv/
+env/
+
+# Arquivos de IDE
+.idea/
+.vscode/
+
+# Arquivo de variáveis de ambiente
+.env
+
+# Arquivos de Banco de Dados local
+*.sqlite3
+db.sqlite3
+
+# Arquivos de Mídia e Estáticos coletados
+/media/
+/static_root/
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
