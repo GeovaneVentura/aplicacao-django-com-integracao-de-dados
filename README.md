@@ -1,4 +1,4 @@
-# Desafio Técnico: Integração e Visualização de Dados com Django
+# Integração e Visualização de Dados com Django
 
 ## Guia de Instalação e Execução
 
